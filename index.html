@@ -51,37 +51,64 @@
     <!-- Partículas -->
     <div id="particles-js"></div>
     
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Soy Daniel Vasquez</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre-mi.html">Sobre Mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="proyectos.html">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="conocimiento.html">Conocimiento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aplicaciones.html">Aplicaciones</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Incluir la barra de navegación desde el archivo externo -->
+    <div id="navbar-container">
+        <!-- Navbar será cargada aquí dinámicamente -->
+    </div>
+    
+    <script>
+        // Cargar la barra de navegación desde el archivo externo
+        fetch('includes/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+                
+                // Ocultar el enlace de la página actual en la barra de navegación
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.parentElement.style.display = 'none';
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar la barra de navegación:', error);
+                // Barra de navegación de respaldo en caso de error
+                document.getElementById('navbar-container').innerHTML = `
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+                        <div class="container">
+                            <a class="navbar-brand" href="index.html">Soy Daniel Vasquez</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="sobre-mi.html">Sobre Mí</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="conocimiento.html">Conocimiento</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contacto.html">Contacto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="aplicaciones.html">Aplicaciones</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                `;
+            });
+    </script>
 
     <!-- Hero Section -->
     <header id="inicio" class="py-5 mt-5">
@@ -159,25 +186,52 @@
         <button id="animate-btn" class="floating-btn">🔄</button>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Soy Daniel Vasquez</div>
-                <div class="footer-links">
-                    <a href="index.html"><i class="fas fa-home me-2"></i> Inicio</a>
-                    <a href="sobre-mi.html"><i class="fas fa-user me-2"></i> Sobre Mí</a>
-                    <a href="proyectos.html"><i class="fas fa-project-diagram me-2"></i> Proyectos</a>
-                    <a href="conocimiento.html"><i class="fas fa-brain me-2"></i> Conocimiento</a>
-                    <a href="contacto.html"><i class="fas fa-envelope me-2"></i> Contacto</a>
-                    <a href="aplicaciones.html"><i class="fas fa-cogs me-2"></i> Aplicaciones</a>
-                </div>
-                <div class="footer-copyright">
-                    &copy; 2025 Soy Daniel Vasquez. Todos los derechos reservados.
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Incluir el pie de página desde el archivo externo -->
+    <div id="footer-container">
+        <!-- Footer será cargado aquí dinámicamente -->
+    </div>
+    
+    <script>
+        // Cargar el pie de página desde el archivo externo
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+                
+                // Ocultar el enlace de la página actual en el pie de página
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.style.display = 'none';
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar el pie de página:', error);
+                // Pie de página de respaldo en caso de error
+                document.getElementById('footer-container').innerHTML = `
+                    <footer>
+                        <div class="container">
+                            <div class="footer-content">
+                                <div class="footer-logo">Soy Daniel Vasquez</div>
+                                <div class="footer-links">
+                                    <a href="index.html"><i class="fas fa-home me-2"></i> Inicio</a>
+                                    <a href="sobre-mi.html"><i class="fas fa-user me-2"></i> Sobre Mí</a>
+                                    <a href="proyectos.html"><i class="fas fa-project-diagram me-2"></i> Proyectos</a>
+                                    <a href="conocimiento.html"><i class="fas fa-brain me-2"></i> Conocimiento</a>
+                                    <a href="contacto.html"><i class="fas fa-envelope me-2"></i> Contacto</a>
+                                    <a href="aplicaciones.html"><i class="fas fa-cogs me-2"></i> Aplicaciones</a>
+                                </div>
+                                <div class="footer-copyright">
+                                    &copy; 2025 Soy Daniel Vasquez. Todos los derechos reservados.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            });
+    </script>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
