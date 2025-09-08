@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web Personal</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/modern-icons.css">
+    <style>
+        .metallic-effect-test {
+            text-shadow: 
+                0 0 2px #fff,
+                0 0 4px #fff,
+                0 0 6px #c0c0c0,
+                0 0 8px #c0c0c0;
+            animation: metallicEffectTest 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes metallicEffectTest {
+            0% {
+                text-shadow: 
+                    0 0 2px #fff,
+                    0 0 4px #fff,
+                    0 0 6px #c0c0c0,
+                    0 0 8px #c0c0c0;
+            }
+            50% {
+                text-shadow: 
+                    0 0 2px #fff,
+                    0 0 4px #fff,
+                    0 0 6px #a0a0a0,
+                    0 0 8px #a0a0a0;
+            }
+            100% {
+                text-shadow: 
+                    0 0 2px #fff,
+                    0 0 4px #fff,
+                    0 0 6px #c0c0c0,
+                    0 0 8px #c0c0c0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas -->
+    <div id="particles-js"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Soy Daniel Vasquez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-mi.html">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="conocimiento.html">Conocimiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aplicaciones.html">Aplicaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold iris-text">Hola soy Daniel Vasquez</h1>
+                    <p class="lead">Bienvenido a mi espacio web personal donde comparto mis proyectos, conocimientos y aplicaciones útiles para el día a día.</p>
+                    <a href="sobre-mi.html" class="btn btn-primary btn-lg pulse-element">Conóceme más</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <!-- Imagen de procesador -->
+                    <img src="assets/images/processor-profile.svg" alt="Foto de perfil" class="img-fluid rounded-circle glow-element" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main class="container my-5">
+        <!-- Sección de Bienvenida -->
+        <section class="mb-5 fade-in-element">
+            <div class="minimalist-card">
+                <h2 class="text-center mb-4">Bienvenido a Mi Espacio</h2>
+                <p class="text-center">
+                    Este sitio web es mi centro digital personal. Aquí encontrarás una muestra de mi trabajo, 
+                    información sobre mis habilidades y un conjunto de aplicaciones diseñadas para hacer más 
+                    eficiente la gestión de tareas cotidianas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección de Enlaces Rápidos -->
+        <section class="mb-5 fade-in-element">
+            <h2 class="text-center mb-4">Acceso Rápido</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="minimalist-card text-center fade-in-element">
+                        <div class="modern-icon icon-primary mx-auto">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h5>Sobre Mí</h5>
+                        <p>Descubre quién soy, mis intereses y mi trayectoria.</p>
+                        <a href="sobre-mi.html" class="btn btn-outline-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="minimalist-card text-center fade-in-element">
+                        <div class="modern-icon icon-success mx-auto">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h5>Proyectos</h5>
+                        <p>Explora los proyectos en los que he trabajado.</p>
+                        <a href="proyectos.html" class="btn btn-outline-success">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="minimalist-card text-center fade-in-element">
+                        <div class="modern-icon icon-info mx-auto">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5>Aplicaciones</h5>
+                        <p>Accede a herramientas útiles para el hogar y la gestión personal.</p>
+                        <a href="aplicaciones.html" class="btn btn-outline-info">Ir a aplicaciones</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- Botones flotantes -->
+    <div class="floating-buttons">
+        <button id="animate-btn" class="floating-btn">🔄</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Soy Daniel Vasquez</div>
+                <div class="footer-links">
+                    <a href="index.html"><i class="fas fa-home me-2"></i> Inicio</a>
+                    <a href="sobre-mi.html"><i class="fas fa-user me-2"></i> Sobre Mí</a>
+                    <a href="proyectos.html"><i class="fas fa-project-diagram me-2"></i> Proyectos</a>
+                    <a href="conocimiento.html"><i class="fas fa-brain me-2"></i> Conocimiento</a>
+                    <a href="contacto.html"><i class="fas fa-envelope me-2"></i> Contacto</a>
+                    <a href="aplicaciones.html"><i class="fas fa-cogs me-2"></i> Aplicaciones</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2025 Soy Daniel Vasquez. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Evento para el botón de cambiar patrón de partículas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prueba directa del efecto metálico
+            console.log('Iniciando prueba de efecto metálico...');
+            const testElements = document.querySelectorAll('.iris-text');
+            console.log('Elementos encontrados:', testElements.length);
+            testElements.forEach(element => {
+                console.log('Aplicando clase directamente a:', element);
+                element.classList.add('metallic-effect');
+                console.log('Clases después de aplicar:', element.classList);
+            });
+            
+            const animateBtn = document.getElementById('animate-btn');
+            if (animateBtn) {
+                animateBtn.addEventListener('click', function() {
+                    DVSEffects.changeParticlePattern();
+                    
+                    // Efecto visual al cambiar patrón
+                    this.style.transform = 'scale(1.3)';
+                    this.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.5)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                        this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+                    }, 300);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

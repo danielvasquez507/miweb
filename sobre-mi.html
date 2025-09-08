@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Mi Web Personal</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/modern-icons.css">
+</head>
+<body>
+    <!-- Partículas -->
+    <div id="particles-js"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Soy Daniel Vasquez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre-mi.html">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="conocimiento.html">Conocimiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aplicaciones.html">Aplicaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold iris-text">Hola soy Daniel Vasquez</h1>
+                    <p class="lead">Conoce mi trayectoria profesional y personal.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <!-- Imagen de procesador -->
+                    <img src="assets/images/processor-profile.svg" alt="Foto de perfil" class="img-fluid rounded-circle glow-element" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="mb-5 fade-in-element">
+            <h2 class="mb-4">Mi Trayectoria</h2>
+            <p>
+                Soy un profesional apasionado por la tecnología y el desarrollo web. Con más de 5 años de experiencia 
+                en el sector, he tenido la oportunidad de trabajar en diversos proyectos que abarcan desde sitios web 
+                corporativos hasta aplicaciones web complejas.
+            </p>
+            <p>
+                Mi enfoque se centra en crear soluciones eficientes, accesibles y centradas en el usuario. Creo firmemente 
+                que la tecnología debe mejorar la vida de las personas, y me esfuerzo por lograrlo en cada proyecto en el 
+                que participo.
+            </p>
+        </section>
+
+        <section class="mb-5 fade-in-element">
+            <h2 class="mb-4">Intereses Personales</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 fade-in-element">
+                        <div class="card-body text-center">
+                            <i class="fas fa-book fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Lectura</h5>
+                            <p class="card-text">Disfruto leyendo libros de tecnología, ciencia ficción y desarrollo personal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 fade-in-element">
+                        <div class="card-body text-center">
+                            <i class="fas fa-music fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Música</h5>
+                            <p class="card-text">Toco la guitarra y el piano. Me gusta explorar diferentes géneros musicales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 fade-in-element">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hiking fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Naturaleza</h5>
+                            <p class="card-text">Me encanta hacer senderismo y acampar en lugares con paisajes naturales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in-element">
+            <h2 class="mb-4">Filosofía Profesional</h2>
+            <blockquote class="blockquote">
+                <p>"El código limpio no se escribe siguiendo un conjunto de reglas. No te conviertes en un artesano de software 
+                aprendiendo una lista de heurísticas. El profesionalismo y la maestría provienen de valores que impulsa la 
+                disciplina."</p>
+                <footer class="blockquote-footer">Robert C. Martin</footer>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Botones flotantes -->
+    <div class="floating-buttons">
+        <button id="animate-btn" class="floating-btn">🔄</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Soy Daniel Vasquez</div>
+                <div class="footer-links">
+                    <a href="index.html"><i class="fas fa-home me-2"></i> Inicio</a>
+                    <a href="sobre-mi.html"><i class="fas fa-user me-2"></i> Sobre Mí</a>
+                    <a href="proyectos.html"><i class="fas fa-project-diagram me-2"></i> Proyectos</a>
+                    <a href="conocimiento.html"><i class="fas fa-brain me-2"></i> Conocimiento</a>
+                    <a href="contacto.html"><i class="fas fa-envelope me-2"></i> Contacto</a>
+                    <a href="aplicaciones.html"><i class="fas fa-cogs me-2"></i> Aplicaciones</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2025 Soy Daniel Vasquez. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Evento para el botón de cambiar patrón de partículas
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateBtn = document.getElementById('animate-btn');
+            if (animateBtn) {
+                animateBtn.addEventListener('click', function() {
+                    DVSEffects.changeParticlePattern();
+                    
+                    // Efecto visual al cambiar patrón
+                    this.style.transform = 'scale(1.3)';
+                    this.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.5)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                        this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+                    }, 300);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

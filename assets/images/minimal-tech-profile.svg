@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Fondo con gradiente sutil -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="accentGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+    </radialGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo sutil -->
+  <rect width="200" height="200" fill="url(#bgGradient)"/>
+  <circle cx="100" cy="100" r="100" fill="url(#accentGradient)"/>
+  
+  <!-- Marco hexagonal moderno -->
+  <polygon points="100,30 160,65 160,135 100,170 40,135 40,65" 
+           fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Símbolo de ingeniería de sistemas -->
+  <g transform="translate(100, 100)">
+    <!-- Círculo exterior -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.8"/>
+    
+    <!-- Conexiones de red -->
+    <line x1="0" y1="-40" x2="0" y2="-60" stroke="#60a5fa" stroke-width="1.5"/>
+    <line x1="40" y1="0" x2="60" y2="0" stroke="#60a5fa" stroke-width="1.5"/>
+    <line x1="0" y1="40" x2="0" y2="60" stroke="#60a5fa" stroke-width="1.5"/>
+    <line x1="-40" y1="0" x2="-60" y2="0" stroke="#60a5fa" stroke-width="1.5"/>
+    
+    <!-- Nodo central -->
+    <circle cx="0" cy="0" r="8" fill="#3b82f6" filter="url(#glow)"/>
+    
+    <!-- Nodos periféricos -->
+    <circle cx="0" cy="-40" r="4" fill="#10b981"/>
+    <circle cx="40" cy="0" r="4" fill="#f59e0b"/>
+    <circle cx="0" cy="40" r="4" fill="#ef4444"/>
+    <circle cx="-40" cy="0" r="4" fill="#8b5cf6"/>
+    
+    <!-- Conexiones internas -->
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="#93c5fd" stroke-width="0.8" opacity="0.7"/>
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#93c5fd" stroke-width="0.8" opacity="0.7"/>
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#93c5fd" stroke-width="0.8" opacity="0.7"/>
+    <line x1="0" y1="0" x2="-40" y2="0" stroke="#93c5fd" stroke-width="0.8" opacity="0.7"/>
+  </g>
+  
+  <!-- Efecto de datos flotantes -->
+  <g font-family="monospace" font-size="6" fill="#60a5fa" opacity="0.7">
+    <text x="50" y="40">101</text>
+    <text x="140" y="55">010</text>
+    <text x="150" y="130">110</text>
+    <text x="45" y="145">001</text>
+  </g>
+  
+  <!-- Puntos de conexión -->
+  <circle cx="100" cy="20" r="2" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="180" cy="100" r="2" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="100" cy="180" r="2" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="20" cy="100" r="2" fill="#60a5fa" opacity="0.8"/>
+</svg>

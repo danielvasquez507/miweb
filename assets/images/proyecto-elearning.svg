@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Fondo con gradiente -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8e2de2;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#4a00e0;stop-opacity:0.2" />
+    </linearGradient>
+    
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="200" fill="url(#bgGradient)" />
+  
+  <!-- Libro de educación -->
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="60" height="80" rx="5" fill="#7c3aed" />
+    <rect x="5" y="5" width="50" height="70" rx="3" fill="#8b5cf6" />
+    
+    <!-- Páginas del libro -->
+    <g fill="#a78bfa">
+      <rect x="15" y="15" width="30" height="2" rx="1" />
+      <rect x="15" y="25" width="25" height="2" rx="1" />
+      <rect x="15" y="35" width="35" height="2" rx="1" />
+      <rect x="15" y="45" width="20" height="2" rx="1" />
+      <rect x="15" y="55" width="30" height="2" rx="1" />
+    </g>
+    
+    <!-- Etiqueta del libro -->
+    <rect x="0" y="70" width="60" height="15" rx="2" fill="#6366f1" />
+    <text x="30" y="81" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">E-LEARNING</text>
+  </g>
+  
+  <!-- Interfaz de plataforma educativa -->
+  <g transform="translate(150, 30)">
+    <!-- Pantalla principal -->
+    <rect x="0" y="0" width="180" height="120" rx="8" fill="url(#cardGradient)" stroke="#8b5cf6" stroke-width="1" filter="url(#glow)" />
+    
+    <!-- Encabezado -->
+    <text x="90" y="20" font-family="Arial, sans-serif" font-size="12" fill="#ddd6fe" text-anchor="middle" font-weight="bold">PLATAFORMA EDUCATIVA</text>
+    
+    <!-- Curso destacado -->
+    <g transform="translate(10, 30)">
+      <rect x="0" y="0" width="160" height="30" rx="5" fill="#7c3aed" opacity="0.5" />
+      <circle cx="15" cy="15" r="8" fill="#a78bfa" />
+      <text x="30" y="18" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe" font-weight="bold">Desarrollo Web Avanzado</text>
+      <rect x="130" y="10" width="20" height="10" rx="3" fill="#8b5cf6" />
+      <text x="140" y="18" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">85%</text>
+    </g>
+    
+    <!-- Lista de cursos -->
+    <g transform="translate(10, 70)">
+      <rect x="0" y="0" width="75" height="20" rx="3" fill="#6366f1" opacity="0.7" />
+      <text x="37" y="13" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Programación</text>
+      
+      <rect x="85" y="0" width="75" height="20" rx="3" fill="#7c3aed" opacity="0.7" />
+      <text x="122" y="13" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Diseño UX/UI</text>
+    </g>
+    
+    <!-- Barra de progreso -->
+    <g transform="translate(10, 100)">
+      <rect x="0" y="0" width="160" height="8" rx="4" fill="#4c1d95" opacity="0.5" />
+      <rect x="0" y="0" width="120" height="8" rx="4" fill="#8b5cf6" />
+    </g>
+  </g>
+  
+  <!-- Iconos de certificación -->
+  <g transform="translate(350, 30)">
+    <g transform="rotate(15)">
+      <rect x="-20" y="-25" width="40" height="50" rx="5" fill="#7c3aed" />
+      <rect x="-15" y="-20" width="30" height="30" rx="3" fill="#8b5cf6" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">★</text>
+    </g>
+  </g>
+  
+  <g transform="translate(320, 120)">
+    <circle cx="0" cy="0" r="15" fill="#6366f1" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+  </g>
+</svg>

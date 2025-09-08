@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Fondo del círculo -->
+  <circle cx="100" cy="100" r="100" fill="url(#grad1)"/>
+  
+  <!-- Gradiente para el fondo -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sombra para el casco -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feFlood flood-color="rgba(0,0,0,0.5)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Casco del astronauta con colores vibrantes -->
+  <circle cx="100" cy="90" r="50" fill="#4a9fff" stroke="#1e3c72" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Visor del casco con reflejos -->
+  <ellipse cx="100" cy="85" rx="35" ry="30" fill="url(#visorGrad)"/>
+  <defs>
+    <linearGradient id="visorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#6a11cb;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Reflejo en el visor -->
+  <ellipse cx="90" cy="80" rx="10" ry="15" fill="rgba(255,255,255,0.8)"/>
+  <ellipse cx="110" cy="75" rx="5" ry="8" fill="rgba(255,255,255,0.9)"/>
+  
+  <!-- Cuerpo del traje con colores vivos -->
+  <rect x="75" y="130" width="50" height="40" rx="10" fill="#ff6b6b" filter="url(#shadow)"/>
+  
+  <!-- Detalles del traje -->
+  <rect x="85" y="135" width="30" height="5" rx="2" fill="#4ecdc4"/>
+  <circle cx="100" cy="150" r="3" fill="#ffd166"/>
+  
+  <!-- Brazos con colores contrastantes -->
+  <rect x="65" y="135" width="15" height="30" rx="7" fill="#06d6a0" filter="url(#shadow)"/>
+  <rect x="120" y="135" width="15" height="30" rx="7" fill="#06d6a0" filter="url(#shadow)"/>
+  
+  <!-- Detalles de los brazos -->
+  <circle cx="72" cy="145" r="2" fill="#ff9ff3"/>
+  <circle cx="128" cy="145" r="2" fill="#ff9ff3"/>
+  
+  <!-- Piernas -->
+  <rect x="80" y="170" width="15" height="25" rx="7" fill="#118ab2" filter="url(#shadow)"/>
+  <rect x="105" y="170" width="15" height="25" rx="7" fill="#118ab2" filter="url(#shadow)"/>
+  
+  <!-- Botas con colores vivos -->
+  <rect x="75" y="195" width="20" height="5" rx="2" fill="#ef476f"/>
+  <rect x="105" y="195" width="20" height="5" rx="2" fill="#ef476f"/>
+  
+  <!-- Mochila del traje -->
+  <rect x="125" y="130" width="15" height="30" rx="5" fill="#073b4c" filter="url(#shadow)"/>
+  <circle cx="132" cy="140" r="2" fill="#ff9ff3"/>
+  <circle cx="132" cy="150" r="2" fill="#ffd166"/>
+  
+  <!-- Estrellas de fondo coloridas -->
+  <circle cx="40" cy="40" r="1.5" fill="#ffd166" opacity="0.9"/>
+  <circle cx="160" cy="30" r="1" fill="#06d6a0" opacity="0.9"/>
+  <circle cx="180" cy="70" r="1.2" fill="#ef476f" opacity="0.9"/>
+  <circle cx="20" cy="80" r="1" fill="#118ab2" opacity="0.9"/>
+  <circle cx="60" cy="150" r="1.3" fill="#ff9ff3" opacity="0.9"/>
+  <circle cx="170" cy="160" r="1.5" fill="#073b4c" opacity="0.9"/>
+  <circle cx="140" cy="180" r="1" fill="#4ecdc4" opacity="0.9"/>
+  <circle cx="30" cy="170" r="1.2" fill="#a78bfa" opacity="0.9"/>
+</svg>

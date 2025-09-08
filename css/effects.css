@@ -1,0 +1,201 @@
+/* effects.css - Efectos visuales especiales */
+
+/* Efecto metálico para textos importantes */
+.metallic-effect {
+  /* Efecto metálico con múltiples capas de brillo */
+  text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #c0c0c0,
+      0 0 8px #c0c0c0;
+  animation: metallicEffect 2s ease-in-out infinite alternate;
+}
+
+@keyframes metallicEffect {
+  0% {
+      text-shadow: 
+          0 0 2px #fff,
+          0 0 4px #fff,
+          0 0 6px #c0c0c0,
+          0 0 8px #c0c0c0;
+      color: #ffffff;
+  }
+  25% {
+      text-shadow: 
+          0 0 2px #fff,
+          0 0 4px #fff,
+          0 0 6px #a0a0a0,
+          0 0 8px #a0a0a0;
+      color: #f8f9fa;
+  }
+  50% {
+      text-shadow: 
+          0 0 2px #fff,
+          0 0 4px #fff,
+          0 0 6px #808080,
+          0 0 8px #808080;
+      color: #f1f3f5;
+  }
+  75% {
+      text-shadow: 
+          0 0 2px #fff,
+          0 0 4px #fff,
+          0 0 6px #a0a0a0,
+          0 0 8px #a0a0a0;
+      color: #e9ecef;
+  }
+  100% {
+      text-shadow: 
+          0 0 2px #fff,
+          0 0 4px #fff,
+          0 0 6px #c0c0c0,
+          0 0 8px #c0c0c0;
+      color: #ffffff;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Efecto de aparición suave */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto de pulso */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Efecto de brillo */
+.glow {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+  to { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+}
+
+/* Botones flotantes */
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.floating-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 2001;
+  backdrop-filter: blur(10px);
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff9ff3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Partículas personalizadas */
+.custom-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Configuración de partículas más visibles */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
