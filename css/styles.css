@@ -453,13 +453,7 @@ section {
     padding-top: 56px;
   }
   
-  /* Navbar con fondo más visible en móvil */
-  .navbar {
-    background: rgba(30, 30, 46, 0.95) !important; /* Fondo más opaco para mejor contraste */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
+  /* Solo cambiar el fondo del menú desplegado, no del navbar principal */
   .navbar-collapse {
     background: rgba(40, 40, 60, 0.95); /* Fondo más visible para el menú desplegado */
     backdrop-filter: blur(15px);
@@ -481,6 +475,16 @@ section {
   .footer-links {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  /* Ocultar enlaces de página en el footer en modo móvil */
+  .footer-links a[href*=".html"] {
+    display: none;
+  }
+  
+  /* Mostrar solo copyright y logo en móvil */
+  .footer-logo, .footer-copyright {
+    display: block;
   }
   
   /* Mejoras para formularios en móvil */
