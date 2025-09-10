@@ -455,7 +455,7 @@ section {
   
   /* Solo cambiar el fondo del menú desplegado, no del navbar principal */
   .navbar-collapse {
-    background: rgba(40, 40, 60, 0.95); /* Fondo más visible para el menú desplegado */
+    background: rgba(30, 60, 114, 0.95); /* Azul oscuro que combina con el gradiente principal */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 0 0 20px 20px;
