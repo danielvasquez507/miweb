@@ -453,14 +453,21 @@ section {
     padding-top: 56px;
   }
   
+  /* Navbar con fondo más visible en móvil */
+  .navbar {
+    background: rgba(30, 30, 46, 0.95) !important; /* Fondo más opaco para mejor contraste */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
   .navbar-collapse {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(40, 40, 60, 0.95); /* Fondo más visible para el menú desplegado */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 0 0 20px 20px;
     padding: 1rem;
     margin-top: 1rem;
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
   }
   
   #inicio h1 {
