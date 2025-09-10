@@ -475,4 +475,127 @@ section {
     flex-direction: column;
     gap: 1rem;
   }
+  
+  /* Mejoras para formularios en móvil */
+  .row .col-md-6, 
+  .row .col-md-4, 
+  .row .col-md-3, 
+  .row .col-md-2, 
+  .row .col-md-1 {
+    margin-bottom: 1rem;
+  }
+  
+  .row .col-md-6:last-child, 
+  .row .col-md-4:last-child, 
+  .row .col-md-3:last-child, 
+  .row .col-md-2:last-child, 
+  .row .col-md-1:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Ajustes para botones en formularios */
+  .btn.w-100 {
+    width: 100% !important;
+  }
+  
+  /* Ajustes para cards en móvil */
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Ajustes para el dashboard en móvil */
+  .row [class*="col-"] {
+    margin-bottom: 1rem;
+  }
+  
+  /* Ajustes para tablas en móvil */
+  .table-responsive {
+    font-size: 0.85rem;
+  }
+  
+  .table th, .table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  /* Ajustes para imágenes en móvil */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Ajustes para el hero section en móvil */
+  #inicio .lead {
+    font-size: 1rem;
+  }
+  
+  /* Ajustes para títulos en móvil */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Ajustes para el footer en móvil */
+  .footer-links a {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Media query para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 56px;
+  }
+  
+  #inicio h1 {
+    font-size: 2rem;
+  }
+  
+  #inicio .lead {
+    font-size: 0.9rem;
+  }
+  
+  .app-section {
+    padding: 1rem;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.75rem;
+  }
+  
+  /* Ajustes específicos para formularios en pantallas muy pequeñas */
+  .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .row > [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
